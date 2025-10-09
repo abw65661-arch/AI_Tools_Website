@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - دليل أدوات الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="logo.png" alt="شعار Media Intelligence"></a>
+            <ul>
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a href="apps.html">التطبيقات</a></li>
+                <li><a href="add_app.html">إضافة تطبيق</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>إضافة تطبيق جديد</h2>
+            <p>يرجى ملء الحقول التالية لإضافة تطبيق جديد إلى الدليل.</p>
+
+            <div id="error-message" class="error-message"></div>
+
+            <form id="add-app-form">
+                <div class="form-group">
+                    <label for="appName">اسم التطبيق (أحرف إنجليزية فقط بدون فراغات):</label>
+                    <input type="text" id="appName" name="appName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="companyName">الشركة المصنعة (أحرف إنجليزية فقط):</label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appURL">الموقع الإلكتروني (URL):</label>
+                    <input type="url" id="appURL" name="appURL" required placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label>مجاني أم لا؟</label>
+                    <div class="radio-group">
+                        <input type="radio" id="isFree" name="pricing" value="مجاني" checked>
+                        <label for="isFree">مجاني</label>
+                        <input type="radio" id="isPaid" name="pricing" value="غير مجاني">
+                        <label for="isPaid">غير مجاني</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">مجال الاستخدام:</label>
+                    <select id="category" name="category">
+                        <option value="E-Commerce">التجارة الإلكترونية</option>
+                        <option value="Education">التعليم</option>
+                        <option value="Robotics">الروبوتات</option>
+                        <option value="إنشاء المحتوى">إنشاء المحتوى</option>
+                        <option value="تصميم الصور">تصميم الصور</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">شرح مختصر عن التطبيق:</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">إرسال</button>
+                    <button type="reset">إعادة</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>مشروع تطبيقات الويب - 2025</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="myFunctions.js"></script>
+
+</body>
+</html>
